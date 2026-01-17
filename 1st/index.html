@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredient Conflict Checker</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1 class="app-title">Ingredient Conflict Checker</h1>
+    
+    <div class="container">
+        <p class="subtitle">Check for incompatible cosmetic ingredient combinations</p>
+
+        <label for="ingredients">Enter ingredients (comma-separated):</label>
+        <input 
+            type="text" 
+            id="ingredients" 
+            placeholder="e.g., Retinol, Vitamin C, Niacinamide, AHA"
+            aria-label="Ingredient input field"
+        >
+
+        <button onclick="checkConflicts()">Check for Conflicts</button>
+
+        <button class="disclaimer-btn" onclick="toggleDisclaimer()">📋 View Important Information & Disclaimer</button>
+
+        <div id="results" class="results" role="alert"></div>
+    </div>
+
+    <div class="disclaimer" id="disclaimer">
+        <h3>⚠️ Hey, Quick Heads Up!</h3>
+        <p><strong>Before you start mixing and matching, here's what you should know:</strong></p>
+        <ul>
+            <li><strong>This is just a helper tool:</strong> Think of this as a friendly guide, not your dermatologist. Always check with a real skincare pro before trying new combinations!</li>
+            <li><strong>We're working with what we know:</strong> Our database has common conflicts, but we can't know everything. New research comes out all the time!</li>
+            <li><strong>Spelling counts:</strong> Make sure you type ingredient names correctly (like "Retinol" not "Retinool"). If it's misspelled, we won't catch potential issues.</li>
+            <li><strong>No conflicts doesn't mean totally safe:</strong> Just because we didn't find a conflict doesn't mean it's 100% safe for YOUR skin. Everyone's different!</li>
+            <li><strong>Talk to the experts:</strong> Seriously, chat with a dermatologist or skincare professional, especially if you have sensitive skin or any skin conditions.</li>
+            <li><strong>Use at your own risk:</strong> We can't be held responsible if something goes wrong. This tool is meant to help, but it's not the final word.</li>
+            <li><strong>Do your homework:</strong> Use this as a starting point, then dig deeper with trusted sources and professional advice.</li>
+        </ul>
+        <button class="disclaimer-btn" onclick="toggleDisclaimer()">Got it! Close this</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
